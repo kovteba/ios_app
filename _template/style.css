@@ -84,7 +84,7 @@ footer { padding: 24px 16px 48px; color: var(--muted); font-size: 0.9rem; }
 .lightbox {
   border: 0; padding: 0; margin: 0; max-width: none; max-height: none;
   width: 100vw; height: 100vh; height: 100dvh;
-  background: rgba(0, 0, 0, 0.92); color: #fff;
+  background: rgba(0, 0, 0, 0.92); color: #fff; outline: none;
 }
 .lightbox[open] { display: flex; align-items: center; justify-content: center; }
 .lightbox::backdrop { background: rgba(0, 0, 0, 0.92); }
@@ -92,7 +92,11 @@ footer { padding: 24px 16px 48px; color: var(--muted); font-size: 0.9rem; }
   margin: 0; flex: 1; height: 100%; display: flex; flex-direction: column;
   align-items: center; justify-content: center; padding: 48px 8px 16px; min-width: 0;
 }
-.lightbox img { max-width: 100%; max-height: calc(100% - 32px); object-fit: contain; border-radius: 16px; }
+.lightbox img {
+  display: block; width: auto; height: auto; object-fit: contain; border-radius: 16px;
+  max-width: calc(100vw - 132px); max-height: calc(100vh - 110px); max-height: calc(100dvh - 110px);
+}
+@media (max-width: 639px) { .lightbox img { max-width: calc(100vw - 16px); } }
 .lightbox figcaption { margin-top: 10px; color: #d0d0d8; font-size: 0.95rem; text-align: center; white-space: pre; }
 .lightbox button {
   background: rgba(255, 255, 255, 0.12); color: #fff; border: 0; border-radius: 50%;

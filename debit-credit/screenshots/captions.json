@@ -1,0 +1,32 @@
+{
+  "uk": [
+    "Кожна покупка — у потрібній категорії",
+    "Apple Pay записує витрати сам",
+    "Скануйте чек — позиції по категоріях",
+    "Бюджети, що попереджають вчасно",
+    "Куди йдуть гроші — в одному звіті"
+  ],
+  "en": [
+    "Every purchase in the right category",
+    "Apple Pay logs expenses for you",
+    "Scan a receipt, sort every item",
+    "Budgets that warn you in time",
+    "See where money goes, in one report"
+  ],
+  "accentFrom": {
+    "uk": [
+      16,
+      18,
+      15,
+      12,
+      19
+    ],
+    "en": [
+      15,
+      15,
+      16,
+      13,
+      22
+    ]
+  }
+}

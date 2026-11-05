@@ -1,0 +1,79 @@
+:root {
+  --bg: #ffffff;
+  --text: #1c1c1e;
+  --muted: #5c5c66;
+  --link: #1a8a30;
+  --card: #f4f4f8;
+  --rule: #e2e2ea;
+  --band-from: #1c1c3c;
+  --band-to: #3a2f7a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101018;
+    --text: #ececf2;
+    --muted: #a0a0b0;
+    --link: #32d74b;
+    --card: #1a1a2a;
+    --rule: #2e2e50;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+header.band {
+  background: linear-gradient(180deg, var(--band-from), var(--band-to));
+  color: #ffffff;
+  padding: 40px 16px 32px;
+}
+header.band .inner, main, footer { max-width: 720px; margin: 0 auto; }
+header.band h1 { margin: 0 0 6px; font-size: 1.8rem; line-height: 1.2; }
+header.band p { margin: 0; color: #d8d8ee; }
+header.band .accent { color: #32d74b; }
+main { padding: 24px 16px 8px; }
+h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; }
+p, li { margin: 0.5rem 0; }
+ul { padding-left: 1.25rem; }
+a { color: var(--link); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.updated { color: var(--muted); font-size: 0.95rem; }
+.lang { margin-top: 1rem; font-size: 0.95rem; }
+.lang a { color: #32d74b; }
+.cards { display: grid; gap: 12px; margin: 1.5rem 0; }
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+.card span { display: block; color: var(--muted); font-weight: 400; font-size: 0.95rem; }
+footer { padding: 24px 16px 48px; color: var(--muted); font-size: 0.9rem; }
+@media (min-width: 640px) {
+  header.band { padding: 64px 24px 48px; }
+  header.band h1 { font-size: 2.4rem; }
+  main, footer { padding-left: 24px; padding-right: 24px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* Presentation page */
+.intro { font-size: 1.05rem; }
+.shots {
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px 0 12px; margin: 1.5rem 0;
+}
+.shots figure { flex: 0 0 200px; margin: 0; scroll-snap-align: start; }
+.shots img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--rule); display: block; }
+.shots figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+.features { list-style: none; padding: 0; display: grid; gap: 12px; }
+.features li { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 14px 16px; margin: 0; }
+.features strong { display: block; }
+.platforms { color: var(--muted); }
